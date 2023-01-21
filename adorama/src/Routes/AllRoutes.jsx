@@ -1,15 +1,16 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import PrivateRoute from '../Components/Authentication/PrivateRoute';
 import Homepage from '../Pages/Homepage';
+import Cart from '../Pages/Cart';
 import Login from '../Pages/Login';
 import Signup from '../Pages/Signup';
-import ProductPage from '../Components/Authentication/ProductPage';
-import SingleProduct from '../Components/Authentication/SingleProductPage';
+import ProductPage from '../Pages/ProductPage';
+import SingleProduct from '../Pages/SingleProductPage';
+import SearchResults from '../Pages/SearchResults';
 const AllRoutes = () => {
   return (
     <Routes>
-    <Route path="/" element={<Homepage/>}/>
+      <Route path='/' element={<Homepage />} />
       <Route
         path='/signup'
         element={
@@ -26,12 +27,15 @@ const AllRoutes = () => {
           </PrivateRoute>
         }
       />
-      <Route path="/ProductPage" element={<ProductPage/>}/>
-      <Route path="/ProductPage/:id" element={<SingleProduct/>}/>
+      <Route path='/querypage/:category/:value' element={<SearchResults/>}/>
+      <Route path="/products" element={<ProductPage/>}/>
+      <Route path="/products/:id" element={<SingleProduct/>}/>
       {/* <Route path="/signup" element={<Signup/>}/> */}
       {/* <Route path="/admin" element={<AdminPanel/>}/> */}
       {/* <Route path="/admin/products" element={<Products/>}/> */}
+      {/* <Route path="/" element={<Homepage/>} /> */}
+      <Route path='/cart' element={<Cart />} />
     </Routes>
   );
-
 };
+export default AllRoutes

@@ -37,7 +37,7 @@ import {
 } from "react-icons/fi";
 import AdRoutes from "./AdRoutes";
 import { Link } from "react-router-dom";
-import logoImage from "../../Used_Images/TechoMania_without_name_logo.png";
+//import logoImage from "../../Used_Images/TechoMania_without_name_logo.png";
 import { MdOutlinePaid } from "react-icons/md";
 import { FaBeer } from "react-icons/fa";
 

@@ -139,6 +139,7 @@ import {
               w={{ base: '100%', md: '50%' }}
               m='auto'
               color='white'
+              textAlign='center'
               bg={{
                 base: 'linear-gradient(180deg,#002245 0%,#004993 100%)',
                 md: 'none'
@@ -149,7 +150,7 @@ import {
               }}
             >
               <Hide below='md'>
-                <Box pos='relative' top={{ base: '0', md: '45vh', xl: '72' }}>
+                <Box align="center" mb={"-100px"} pos='relative' top={{ base: '0', md: '45vh', xl: '72' }}>
                   <Text fontSize='xl' letterSpacing='wider'>
                     New Customer?
                   </Text>
@@ -204,10 +205,10 @@ import {
               <Hide below='md'>
                 <NavLink to='/'>
                   <Image
-                    src='https://i.postimg.cc/ncGjs3gP/Techo-Mania-1.png'
+                    src=''
                     alt='logo'
-                    display='inline-block'
-                    w={{ base: '100px', md: '150px' }}
+                    display='block'
+                    w={{ base: '100px', md: '150px',lg:"350px" }}
                     m='auto'
                     pb='4'
                   />
@@ -227,7 +228,7 @@ import {
                       py='4'
                       mt='2'
                       display='inline-block'
-                      src='https://i.postimg.cc/ncGjs3gP/Techo-Mania-1.png'
+                      src=''
                       alt='logo'
                     />
                   </NavLink>
@@ -236,6 +237,7 @@ import {
                     <Text
                       letterSpacing='wider'
                       fontSize={{ base: 'lg', sm: 'xl' }}
+                      
                     >
                       New Customer?
                     </Text>
@@ -371,29 +373,49 @@ import {
                                 />
                               </Tooltip>
                             </InputGroup>
-                            {/* <FormErrorMessage>
-                              {form.errors.password}
-                            </FormErrorMessage> */}
+                            
                           </FormControl>
                         )}
                       </Field>
   
-                      <Box
+                      <Flex
                         mt='4'
+                        gap='2'
                         color='#06c'
-                        lineHeight='4'
-                        display='block'
-                        fontWeight='medium'
+                        align='center'
+                        justify='space-between'
                       >
-                        <Checkbox
-                          value=''
-                          size='sm'
-                          colorScheme='gray'
-                          borderColor='gray.400'
-                        >
-                          <Text>Remember Me</Text>
-                        </Checkbox>
-                      </Box>
+                        <Box lineHeight='4' display='block' fontWeight='medium'>
+                          <Checkbox
+                            value=''
+                            size='sm'
+                            colorScheme='gray'
+                            borderColor='gray.400'
+                          >
+                            <Text>Remember Me</Text>
+                          </Checkbox>
+                        </Box>
+  
+                        <Show below='md'>
+                          <Tooltip
+                            openDelay={1000}
+                            placement='bottom-end'
+                            label='Forgot password'
+                          >
+                            <NavLink>
+                              <Text
+                                fontSize='sm'
+                                lineHeight='4'
+                                textAlign='left'
+                                fontWeight='medium'
+                                display='inline-block'
+                              >
+                                Forgot Password?
+                              </Text>
+                            </NavLink>
+                          </Tooltip>
+                        </Show>
+                      </Flex>
   
                       <Button
                         mt='6'
@@ -417,19 +439,25 @@ import {
   
                 <Hide below='md'>
                   <Box textAlign='center'>
-                    <NavLink>
-                      <Text
-                        mt='4'
-                        color='#06c'
-                        fontSize='sm'
-                        lineHeight='4'
-                        textAlign='center'
-                        fontWeight='medium'
-                        display='inline-block'
-                      >
-                        Forgot Password?
-                      </Text>
-                    </NavLink>
+                    <Tooltip
+                      openDelay={1000}
+                      placement='bottom-end'
+                      label='Forgot password'
+                    >
+                      <NavLink>
+                        <Text
+                          mt='4'
+                          color='#06c'
+                          fontSize='sm'
+                          lineHeight='4'
+                          textAlign='center'
+                          fontWeight='medium'
+                          display='inline-block'
+                        >
+                          Forgot Password?
+                        </Text>
+                      </NavLink>
+                    </Tooltip>
                   </Box>
                 </Hide>
   
