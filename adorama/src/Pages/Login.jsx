@@ -210,7 +210,7 @@ const Login = () => {
             <Hide below='md'>
               <NavLink to='/'>
                 <Image
-                  src='https://i.postimg.cc/MKzHs8x0/Techo-Mania-logo.png'
+                  src=''
                   alt='logo'
                   display='block'
                   w={{ base: '100px', md: '150px' }}
@@ -233,7 +233,7 @@ const Login = () => {
                     py='4'
                     mt='2'
                     display='inline-block'
-                    src='https://i.postimg.cc/MKzHs8x0/Techo-Mania-logo.png'
+                    src=''
                     alt='logo'
                   />
                 </NavLink>
