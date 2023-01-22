@@ -1,6 +1,7 @@
+
 import { Box,Flex,Link,Text,Input,Select } from '@chakra-ui/react'
 import React, { useState } from 'react'
-import { BsTelephone,BsInfoCircle,BsSearch } from "react-icons/bs";
+import { BsTelephone,BsInfoCircle, } from "react-icons/bs";
 import { TbMessageCircle2 } from "react-icons/tb";
 import { FiShoppingCart } from "react-icons/fi";
 import {RxPerson} from "react-icons/rx";
